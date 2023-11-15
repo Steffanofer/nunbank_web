@@ -86,7 +86,7 @@ class HomePage extends StatelessWidget {
                                   style: TextStyle(
                                       color: Colors.black54, fontSize: 12),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -94,6 +94,26 @@ class HomePage extends StatelessWidget {
                           padding: EdgeInsets.only(top: 24, left: 16),
                           child: Text(
                             'Cartão de crédito',
+                            style: TextStyle(fontSize: 14),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 24, left: 20),
+                          child: TextLine(
+                            icon: Icons.arrow_downward,
+                            iconColor: Colors.black87,
+                            text: 'Resumo de faturas',
+                            style: TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 24, left: 20),
+                          child: TextLine(
+                            icon: Icons.arrow_downward,
+                            iconColor: Colors.black87,
+                            text: 'Meus cartões',
                             style: TextStyle(
                               fontSize: 14,
                             ),
@@ -108,7 +128,103 @@ class HomePage extends StatelessWidget {
           ),
           Expanded(
             flex: 4,
-            child: Container(),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 40, left: 40, bottom: 40),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Conta',
+                        style: TextStyle(color: Colors.grey[400], fontSize: 18),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(left: 12),
+                        padding: const EdgeInsets.all(3),
+                        decoration: BoxDecoration(
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(6)),
+                            color: Colors.grey[300]),
+                        child: const Text(
+                          'Em breve',
+                          style: TextStyle(color: Colors.black54, fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 200),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Saldo disponível',
+                              style: TextStyle(
+                                  color: Colors.grey[400], fontSize: 14),
+                            ),
+                            Text('******',
+                                style: TextStyle(
+                                    color: Colors.grey[400], fontSize: 14))
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const Divider(),
+                const Padding(
+                  padding: EdgeInsets.only(top: 40, left: 40, bottom: 40),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Cartão de crédito',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w600),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 20),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          size: 14,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 140),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Fatura atual',
+                              style: TextStyle(fontSize: 14),
+                            ),
+                            Text('R\$ 600,00', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600))
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 140),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  'Fatura atual',
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text('R\$ 600,00', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),
